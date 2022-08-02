@@ -11,6 +11,7 @@ echo "The node label is: ${env.NODE_LABELS}"
 echo "The build number is: ${env.BUILD_NUMBER}"
 
 try{
+slacknotifications("STARTED")
 
 stage('CheckoutCode'){
 git branch: 'development', credentialsId: '0597cb78-4198-4be8-af15-6f7530e9c51b', url: 'https://github.com/Ghousebablu/maven-web-application.git'
